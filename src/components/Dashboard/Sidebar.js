@@ -31,11 +31,11 @@ const Sidebar = () => {
            <ListGroup.Item as={Link} to="/dashboard/addProduct" className="sidebar__item" style={{ backgroundColor:"#54B12B" }} >Add Products</ListGroup.Item>
            <ListGroup.Item as={Link} to="/dashboard/editProduct" className="sidebar__item" style={{ backgroundColor:"#54B12B" }} >Edit Products</ListGroup.Item>
            <ListGroup.Item as={Link} to="/dashboard/addAdmin" className="sidebar__item" style={{ backgroundColor:"#54B12B" }} >Add Admin</ListGroup.Item>
-           <ListGroup.Item as={Link} to="" className="sidebar__item" style={{ backgroundColor:"#54B12B" }} >All Booking List</ListGroup.Item>
+           <ListGroup.Item as={Link} to="/dashboard/allBooking" className="sidebar__item" style={{ backgroundColor:"#54B12B" }} >All Booking List</ListGroup.Item>
            </div>
            }
-            <ListGroup.Item as={Link} to="" className="sidebar__item" style={{ backgroundColor:"#54B12B" }} >Booking List</ListGroup.Item>
-            <ListGroup.Item as={Link} to="" className="sidebar__item" style={{ backgroundColor:"#54B12B" }} >Reviews</ListGroup.Item>
+            <ListGroup.Item as={Link} to="/dashboard/booking" className="sidebar__item" style={{ backgroundColor:"#54B12B" }} >Booking List</ListGroup.Item>
+            <ListGroup.Item as={Link} to="/dashboard/review" className="sidebar__item" style={{ backgroundColor:"#54B12B" }} >Reviews</ListGroup.Item>
           </ListGroup>  
         </Col>
       </Row>

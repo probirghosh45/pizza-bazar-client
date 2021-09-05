@@ -7,6 +7,11 @@ import AddProduct from '../ManageProducts/AddProduct';
 import EditProduct from '../ManageProducts/EditProduct';
 import ManageProducts from '../ManageProducts/ManageProducts';
 import AddAdmin from './AddAdmin/AddAdmin';
+import DashboardHome from '../DashboardHome/DashboardHome';
+import Review from '../Review/Review';
+import Order from '../Order/Order';
+import Booking from '../ManageBooking/Booking';
+import AllBooking from '../ManageBooking/AllBooking';
 
 const Admin = () => {
     const {adminPanel} = useParams();
@@ -22,8 +27,13 @@ const Admin = () => {
                  {
                      adminPanel==="addProduct"? <AddProduct/>
                      :adminPanel==="editProduct" ? <EditProduct editProduct={editProduct} setEditProduct={setEditProduct} />
+                     :adminPanel==="manageProducts" ? <ManageProducts setEditProduct={setEditProduct} />
                      :adminPanel==="addAdmin" ? <AddAdmin/>
-                     :<ManageProducts setEditProduct={setEditProduct} />
+                     :adminPanel==="order" ? <Order/>                     
+                     :adminPanel==="booking" ? <Booking/>                     
+                     :adminPanel==="allBooking" ? <AllBooking/>                     
+                     :adminPanel==="review" ? <Review/>
+                     :<DashboardHome/>
                  }
                 </Col>
             </Row>

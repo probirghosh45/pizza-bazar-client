@@ -5,25 +5,27 @@ import { useForm } from "react-hook-form";
 
 const AddAdmin = () => {
     const {register,handleSubmit,watch,formState: { errors }} = useForm();
-    // const [admin, setAdmin] = useState({});
 
     const onSubmit = (data) => {
     
         console.log(data);
   
-        // axios.post('http://localhost:7500/addAdmin',data)
-        // .then(res=> {res.data })
-        // .then(err => console.log(err));
+        axios.post('http://localhost:7500/addAdmin',data)
+        .then(res=>{
+          console.log(res);
+          console.log(res.data);
+        })
+        .catch(err => console.log(err));
  
 
   
-      fetch('http://localhost:7500/addAdmin', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      })
-      .then(res => res.json())
-      .then(data => console.log(data))
+      // fetch('http://localhost:7500/addAdmin', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(data)
+      // })
+      // .then(res => res.json())
+      // .then(data => console.log(data))
 
     }
      

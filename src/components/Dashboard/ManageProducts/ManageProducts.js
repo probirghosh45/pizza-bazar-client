@@ -10,13 +10,8 @@ const ManageProducts = ({setEditProduct}) => {
 
     useEffect(() => {
       axios.get('http://localhost:7500/products')
-          .then(response => {
-              setItems(response.data);
-              // setLoading(false);
-          })
-          .catch(error => {
-              console.log(error);
-          })
+          .then(response => {setItems(response.data);})
+          .catch(error => {console.log(error)})
   }, [])
   
    
@@ -46,7 +41,6 @@ const ManageProducts = ({setEditProduct}) => {
                     <th>Action</th>
                 </tr>
             </thead>
-            {/* <ClipLoader loading={loading} css={loaderStyle} /> */}
             {
                 items.map(item => <ActionItems item={item} key={item._id} handleDeleteItem={handleDeleteItem}  setEditProduct={setEditProduct} />)
             }

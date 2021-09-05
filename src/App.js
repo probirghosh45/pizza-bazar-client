@@ -8,13 +8,15 @@ import Admin from "./components/Dashboard/Admin/Admin";
 import "./App.css";
 import Login from "./components/Login/Login";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Order from "./components/Dashboard/Order/Order";
 export const UserContext = createContext();
 
 const App = () => {
   const [loggedInUser, setLoggedInUser] = useState({});
+  const [cart,setCart]=useState({})
 
   return (
-    <UserContext.Provider value={{ loggedInUser, setLoggedInUser }}>
+    <UserContext.Provider value={{ loggedInUser, setLoggedInUser,cart,setCart }}>
       <Router>
         <Switch>
           <Route exact path="/">
@@ -29,9 +31,9 @@ const App = () => {
             <Admin />
           </PrivateRoute>
 
-          <Route path="/dashboard/:adminPanel">
+          <PrivateRoute path="/dashboard/:adminPanel">
             <Admin />
-          </Route>
+          </PrivateRoute>
           <Route path="/login">
             <Login />
           </Route>

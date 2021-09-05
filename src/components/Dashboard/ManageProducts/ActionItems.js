@@ -13,7 +13,7 @@ const ActionItems = (props) => {
 
     const redirectEdit = () => {
         props.setEditProduct(props.item)
-        history.replace({ pathname: "/panel/editProduct" });
+        history.replace({ pathname: "/dashboard/editProduct" });
     }
 
   return (

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import swal from 'sweetalert';
 import ActionItems from './ActionItems';
-import AddProduct from './AddProduct'
+import AddProduct from './AddProduct';
 
 
 const EditProduct = ({ editProduct, setEditProduct }) => {
@@ -11,7 +11,7 @@ const EditProduct = ({ editProduct, setEditProduct }) => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:7500/products')
+        axios.get('https://calm-shore-02848.herokuapp.com/products')
             .then(response => {
                 setItems(response.data);
                 // setLoading(false);
@@ -23,7 +23,7 @@ const EditProduct = ({ editProduct, setEditProduct }) => {
 
 
     const updateProduct = Product => {
-        axios.patch(`http://localhost:7500/update/${editProduct?._id}`, Product)
+        axios.patch(`https://calm-shore-02848.herokuapp.com/update/${editProduct?._id}`, Product)
             .then(response => response.data && swal("Successfully updated", "Your product is successfully updated!", "success"))
             .catch(error => console.log(error));
     }

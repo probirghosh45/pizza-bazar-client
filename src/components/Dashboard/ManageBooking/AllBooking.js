@@ -8,7 +8,7 @@ const AllBooking = () => {
   console.log(allBooking);
 
   useEffect(() => {
-    axios.get("http://localhost:7500/allOrders")
+    axios.get("https://calm-shore-02848.herokuapp.com/allOrders")
       .then((res) => setAllBooking(res.data))
       .catch((err) => console.log(err));
   }, []);

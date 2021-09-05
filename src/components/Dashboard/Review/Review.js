@@ -1,6 +1,5 @@
-import axios from "axios";
-import React, { useState} from "react";
-import { Form, Row, Col, Button } from "react-bootstrap";
+import React from "react";
+import { Button, Col, Form, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 
 const Review = () => {
@@ -10,13 +9,13 @@ const Review = () => {
     
         console.log(data);
   
-        // axios.post('http://localhost:7500/addAdmin',data)
+        // axios.post('https://calm-shore-02848.herokuapp.com/addAdmin',data)
         // .then(res=> {res.data })
         // .then(err => console.log(err));
  
 
   
-      fetch('http://localhost:7500/addReview', {
+      fetch('https://calm-shore-02848.herokuapp.com/addReview', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)

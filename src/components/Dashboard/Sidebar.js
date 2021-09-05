@@ -1,4 +1,4 @@
-import React,{useContext,useState,useEffect} from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Col, ListGroup, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { UserContext } from '../../App';
@@ -11,7 +11,7 @@ const Sidebar = () => {
 
 
   useEffect(()=>{
-    fetch('http://localhost:7500/isAdmin',{
+    fetch('https://calm-shore-02848.herokuapp.com/isAdmin',{
         method: 'POST',
         headers: {'content-type':'application/json'},
         body: JSON.stringify({email: loggedInUser.email})

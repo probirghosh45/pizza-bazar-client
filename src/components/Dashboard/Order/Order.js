@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useContext } from 'react';
-import { Col, Form, Row,Button } from 'react-bootstrap';
+import { Button, Col, Form, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { UserContext } from '../../../App';
 
@@ -25,7 +25,7 @@ const Order = () => {
         // console.log(bookingInfo);
 
 
-       axios.post('http://localhost:7500/addOrder',data)
+       axios.post('https://calm-shore-02848.herokuapp.com/addOrder',data)
         .then(res=> {
             console.log(res);
             console.log(res.data);

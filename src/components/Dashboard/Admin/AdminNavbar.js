@@ -16,6 +16,10 @@ const AdminNavbar = () => {
               {
                   adminPanel==="addProduct"? "Add Product"
                   :adminPanel==="editProduct"? "Edit Product"
+                  :adminPanel==="addAdmin"? "Add Admin"
+                  :adminPanel==="allBooking"? "All Booking"
+                  :adminPanel==="booking"? "Booking"
+                  :adminPanel==="review"? "Review"
                   : "Manage Products"
 
               }

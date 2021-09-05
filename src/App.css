@@ -125,3 +125,31 @@
     background: rgba(0, 0, 0, 0.600);
     border-radius: 20px;
 }
+
+
+/* Service Card Design */
+
+
+.service-card:hover{
+  background: linear-gradient(50deg, #67fb62,#58ebdf);
+  color: black !important;
+  box-shadow: 5px 5px 10px grey;
+}
+
+h6{
+  color:fuchsia;
+}
+
+h5{
+  font-size: 20px;
+}
+
+h3{
+  color: crimson;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+

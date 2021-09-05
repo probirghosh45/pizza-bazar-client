@@ -1,6 +1,6 @@
 import axios from "axios";
-import React, { useState} from "react";
-import { Form, Row, Col, Button } from "react-bootstrap";
+import React from "react";
+import { Button, Col, Form, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 
 const AddAdmin = () => {
@@ -10,7 +10,7 @@ const AddAdmin = () => {
     
         console.log(data);
   
-        axios.post('http://localhost:7500/addAdmin',data)
+        axios.post('https://calm-shore-02848.herokuapp.com/addAdmin',data)
         .then(res=>{
           console.log(res);
           console.log(res.data);
@@ -19,7 +19,7 @@ const AddAdmin = () => {
  
 
   
-      // fetch('http://localhost:7500/addAdmin', {
+      // fetch('https://calm-shore-02848.herokuapp.com/addAdmin', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify(data)

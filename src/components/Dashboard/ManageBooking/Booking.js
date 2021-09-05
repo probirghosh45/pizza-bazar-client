@@ -11,7 +11,7 @@ const Booking = () => {
     console.log(booking);
 
     useEffect(() => {
-        axios.get(`http://localhost:7500/orders?email=${loggedInUser.email}`)
+        axios.get(`https://calm-shore-02848.herokuapp.com/orders?email=${loggedInUser.email}`)
           .then((res) => setBooking(res.data))
           .catch((err) => console.log(err));   
       }, [loggedInUser.email]);

@@ -1,6 +1,6 @@
 import axios from "axios";
-import React,{useState} from "react";
-import { Form,Row,Col,Button } from "react-bootstrap";
+import React, { useState } from "react";
+import { Button, Col, Form, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import swal from "sweetalert";
 
@@ -30,7 +30,7 @@ const AddProduct = ({editProduct, updateProduct }) => {
           return updateProduct(productInfo)
       }
   
-      axios.post('http://localhost:7500/addProduct', productInfo )
+      axios.post('https://calm-shore-02848.herokuapp.com/addProduct', productInfo )
       .then(res=> {
         res.data && 
         // alert("New Product Added")

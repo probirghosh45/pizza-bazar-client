@@ -20,7 +20,6 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Header />
             <Home />
           </Route>
           <Route path="/deals">

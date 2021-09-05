@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React,{useState,useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import ActionItems from './ActionItems';
 
@@ -9,7 +9,7 @@ const ManageProducts = ({setEditProduct}) => {
     const [items,setItems]=useState([]);
 
     useEffect(() => {
-      axios.get('http://localhost:7500/products')
+      axios.get('https://calm-shore-02848.herokuapp.com/products')
           .then(response => {setItems(response.data);})
           .catch(error => {console.log(error)})
   }, [])
@@ -18,7 +18,7 @@ const ManageProducts = ({setEditProduct}) => {
   const handleDeleteItem = id => {
     const removedItems = items.filter(item => item._id !== id);
   
-    axios.delete(`http://localhost:7500/delete/${id}`)
+    axios.delete(`https://calm-shore-02848.herokuapp.com/delete/${id}`)
         .then(response => {
             response && setItems(removedItems);;
         })
